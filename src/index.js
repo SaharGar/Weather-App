@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {RootCmp} from './RootCmp';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
+
+import './assets/style/styles.scss';
+import {RootCmp} from './RootCmp';
 
 
 ReactDOM.render(

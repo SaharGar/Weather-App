@@ -1,0 +1,23 @@
+.home-page {
+    width: fit-content;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 5px;
+    text-align: center;
+
+    button {
+        width: fit-content;
+        background-color: rgba(255, 255, 255, 0.281);
+        border: unset;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.596);
+        }   
+    }    
+}
