@@ -15,9 +15,9 @@ export function RootCmp() {
             <Header/>
             <main>
                 <Switch>
-                    <Route component={Favorites} path="/Weather-App/favorites" />
-                    <Route component={Search} path="/Weather-App/search" />
-                    <Route component={Home} path="/Weather-App" />
+                    <Route component={Favorites} path="/WeatherApp/favorites" />
+                    <Route component={Search} path="/WeatherApp/search" />
+                    <Route component={Home} path="/WeatherApp" />
                 </Switch>
             </main>
             {/* <Footer/> */}
