@@ -11,13 +11,13 @@ export const weatherService = {
 }
 
 async function getAutoComplete(debouncedQuary) {
-    const { data } = await Axios.get(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?q=${debouncedQuary}&apikey=Q7d7nPAYi0atAkAxYALsE9wF9paB76dm`)
+    const { data } = await Axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?q=${debouncedQuary}&apikey=Q7d7nPAYi0atAkAxYALsE9wF9paB76dm`)
     return data
 }
 
 async function getLocationForecast(location) {
     if(location.Key) location.key = location.Key
-    const {data} = await Axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${location.key}?apikey=Q7d7nPAYi0atAkAxYALsE9wF9paB76dm`)
+    const {data} = await Axios.get(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${location.key}?apikey=Q7d7nPAYi0atAkAxYALsE9wF9paB76dm`)
     const forecast = data.DailyForecasts.map(day => {
         return (
             {
@@ -35,8 +35,7 @@ async function getLocationForecast(location) {
             }
         )
     })
-    // forecast.headline = data.Headline.Text
-    // forecast.location = location.LocalizedName
+   
     const locationForecast = {
         _id: location.key,
         forecastHeadline: data.Headline.Text,
