@@ -20,15 +20,15 @@
     }
 
 
-    button {
+    .night-day-btn {
         background-color: unset;
         border: unset;
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 30px;
+        transition: all .5s;
 
         &:hover {
-            background-color: unset;
-            color: unset;
+            transform: scale(1.2);            
         }
     }
 

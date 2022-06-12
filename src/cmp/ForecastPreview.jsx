@@ -25,7 +25,7 @@ export function ForecastPreview({ forecast }) {
 
     return (
         <section className="preview" style={{backgroundImage: `url(${isDayOn ? day : night})`}}>
-            <button onClick={toggleForecastTime}>{isDayOn ? '🌙' : '🌞' }</button>
+            <button className="night-day-btn" onClick={toggleForecastTime}>{isDayOn ? '🌙' : '🌞' }</button>
             <h2>{moment(forecast.date).format("MMM Do YYYY")}</h2>
             <section className="day-and-night-container flex column">
                 {isDayOn && <section className="day">

@@ -85,7 +85,7 @@ export function Search() {
                             })}
                         </datalist>}
                 </div>
-                <button>Search</button>
+                <button className='search-btn'>Search</button>
             </form>
 
 
@@ -93,9 +93,9 @@ export function Search() {
             {location &&
                 <section>
                     {favLocations.some(currLocation => currLocation._id === location._id) ?
-                        <i className="like-btn fas fa-heart" onClick={removeLocation}></i>
+                        <i className="like-btn fas fa-heart liked" onClick={removeLocation}></i>
                         :
-                        <i className="like-btn far fa-heart" onClick={saveLocation}></i>}
+                        <i className="like-btn far fa-heart not-liked" onClick={saveLocation}></i>}
                     <ForecastList location={location} />
                 </section>}
         </section>

@@ -6,20 +6,25 @@
 
 html {
     line-height: 1.2;
+    font-family: poppins, sans-serif;
+    font-weight: 300;
 }
 
 body {
     margin: 0;
     padding: 0;
-    // background-color: $clr2;
     font-size: rem(16px);
-    // overflow-x: hidden;
     background-image: url("../../img/sunset2.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
+
+.app {
+    min-height: 100vh;
+    background-color: rgba(122,122,122,0.45);
+}
 
 
 img {
@@ -28,7 +33,7 @@ img {
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0 0;
-    // font-family: latobold, heebobold, sans-serif;
+    font-weight: 700;
 }
 
 a {
@@ -36,14 +41,8 @@ a {
     color: inherit;
 }
 
-// hr {
-//     width: 100%;
-//     border: 1px solid $clr3;
-//     opacity: 0.1;
-// }
 
 button {
     cursor: pointer;
-    // font-family: latobold;
 }
 
