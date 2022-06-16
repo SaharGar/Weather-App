@@ -1,14 +1,28 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 
 export function Header() {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isAppScrolled, setIsAppScrolled] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    },[])
+
+    const handleScroll = () => {
+        if(window.scrollY > 50) setIsAppScrolled(true)
+        else setIsAppScrolled(false)
+    }
 
     return (
-        <section className="app-header flex space-between">
+        <section className={`app-header flex space-between ${isAppScrolled && 'scrolled'}`}>
             <Link to='/'><h1 className="logo">Weather App</h1></Link>
             <ul className="nav-list flex clean-list align-center">
                 <NavLink exact to='/'><li>Home</li></NavLink>

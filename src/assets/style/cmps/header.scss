@@ -2,6 +2,15 @@
     color: white;
     padding: 20px 30px;
     margin-bottom: 50px;
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    transition: background-color, .8s;
+
+    &.scrolled {
+        background-color: rgb(64 64 64);
+
+    }
 
     .logo {
         font-family: pacifico;
@@ -38,7 +47,7 @@
     }
 
     .mobile-menu-container {
-        z-index: 10;
+        z-index: 100;
         background-color: rgba(0, 0, 0, 0.644);
         width: 100vw;
         height: 100vh;
@@ -49,7 +58,7 @@
     }
 
     .mobile-menu {
-        z-index: 100;
+        z-index: 1000;
         width: 150px;
         height: 100vh;
         position: fixed;
